@@ -1,0 +1,71 @@
+export const year = 2023
+
+{year}
+
+## Heading2
+
+### Heading3
+
+#### Heading4
+
+##### Heading5
+
+###### Heading6
+
+[MDX](https://mdxjs.com) allows you to use `JSX` in your markdown content. You can **import components**, such as _interactive charts_ or _alerts_, and embed them within your content. This makes writing long-form content with components a blast. 🚀
+
+[MDX](https://mdxjs.com) `MDX` **MDX** _MDX_ ~~MDX~~ ~~_**[`MDX`](https://mdxjs.com)**_~~
+
+https://github.com/imzxj
+
+
+Here's a simple footnote,[^1] and here's a longer one.[^bignote]
+
+| Command      | Description                                        |
+| ------------ | -------------------------------------------------- |
+| `git status` | List all _new or modified_ files                   |
+| `git diff`   | Show file differences that **haven't been** staged |
+
+
+```jsx:jsx
+function Counter() {
+  const [count, setCount] = useState(0)
+
+  return (
+    <>
+      <p>{count}</p>
+      <button onClick={() => setCount(count + 1)}>+1</button>
+    </>
+  )
+}
+```
+
+
+```js:js {1,3-4} showLineNumbers
+function fancyAlert(arg) {
+  if (arg) {
+    $.facebox({ div: '#foo' })
+  }
+}
+```
+
+- First item
+- Second item
+- Third item
+
+1. First item
+2. Second item
+3. Third item
+
+- [x] First item
+- [ ] Second item
+- [ ] Third item
+
+[^1]: This is the first footnote.
+[^bignote]: Here's one with multiple paragraphs and code.
+
+    Indent paragraphs to include them in the footnote.
+
+    `{ my code }`
+
+    Add as many paragraphs as you like.
