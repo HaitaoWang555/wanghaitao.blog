@@ -1,6 +1,6 @@
 import '@/styles/globals.scss'
 import '@/styles/reset.scss'
-import '@/styles/highlight.scss'
+import '@/styles/markdown.scss'
 import '@/styles/prism.css'
 import 'github-markdown-css'
 import Layout from '@/layout'

@@ -1,6 +1,5 @@
 export const year = 2023
 
-{year}
 
 ## Heading2
 
@@ -11,6 +10,8 @@ export const year = 2023
 ##### Heading5
 
 ###### Heading6
+
+{year}
 
 [MDX](https://mdxjs.com) allows you to use `JSX` in your markdown content. You can **import components**, such as _interactive charts_ or _alerts_, and embed them within your content. This makes writing long-form content with components a blast. 🚀
 
@@ -41,10 +42,19 @@ function Counter() {
 ```
 
 
-```js:js {1,3-4} showLineNumbers
+```js:js {1,3-4}
 function fancyAlert(arg) {
   if (arg) {
     $.facebox({ div: '#foo' })
+  }
+}
+```
+
+```diff-js:diff
+function fancyAlert(arg) {
+  if (arg) {
+-     $.facebox({ div: '#foo1' })
++     $.facebox({ div: '#foo2' })
   }
 }
 ```

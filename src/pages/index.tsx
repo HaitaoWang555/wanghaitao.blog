@@ -13,6 +13,7 @@ export default function Home() {
       </div>
       <div className="w-full flex font-mono">
         <Link href={'/about'}>ABOUT</Link>
+        <Link href={'/test'}>test</Link>
       </div>
     </>
   )

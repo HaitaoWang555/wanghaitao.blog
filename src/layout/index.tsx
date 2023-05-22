@@ -1,5 +1,7 @@
 import config from 'config'
 import Head from 'next/head'
+import Toc from '@/components/toc'
+import Top from '@/components/top'
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -11,8 +13,12 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         />
         <title>{config.title}</title>
       </Head>
-      <main className="min-h-screen p-24 break-all container">
-        <div className="markdown-body">{children}</div>
+      <main className="min-h-screen mx-auto container flex justify-between relative">
+        <div className="markdown-body">
+          {children}
+          <Top />
+        </div>
+        <Toc></Toc>
       </main>
     </>
   )

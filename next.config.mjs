@@ -1,5 +1,8 @@
 import createMDX from '@next/mdx'
 import remarkGfm from 'remark-gfm'
+import rehypeToc from '@jsdevtools/rehype-toc'
+import rehypeAutolinkHeadings from 'rehype-autolink-headings'
+import rehypeSlug from 'rehype-slug'
 import rehypePrism from 'rehype-prism-plus'
 import rehypeCodeTitles from 'rehype-code-titles'
 
@@ -20,7 +23,13 @@ const withMDX = createMDX({
   extension: /\.mdx?$/,
   options: {
     remarkPlugins: [remarkGfm],
-    rehypePlugins: [[rehypeCodeTitles], [rehypePrism, { showLineNumbers: true }]],
+    rehypePlugins: [
+      [rehypeCodeTitles],
+      [rehypePrism, { ignoreMissing: true, showLineNumbers: true }],
+      rehypeSlug,
+      rehypeAutolinkHeadings,
+      rehypeToc,
+    ],
   },
 })
 export default withMDX(nextConfig)
