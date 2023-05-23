@@ -3,6 +3,11 @@ import { usePathname } from 'next/navigation'
 
 function Toc() {
   const pathname = usePathname()
+
+  function isShowToc(type: string) {
+    return type.indexOf('/posts') > -1 || type.indexOf('/test') > -1
+  }
+
   useEffect(() => {
     const toc = document.querySelector('.markdown-body .toc')
     const tocWrap = document.querySelector('#tocWrap .markdown-body')
@@ -15,7 +20,7 @@ function Toc() {
   }, [pathname])
   return (
     <>
-      {['/test'].includes(pathname) && (
+      {isShowToc(pathname) && (
         <div id="tocWrap">
           <div className="markdown-body"></div>
         </div>

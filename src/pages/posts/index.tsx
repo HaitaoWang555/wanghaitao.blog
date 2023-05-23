@@ -1,10 +1,10 @@
 import Link from 'next/link'
 import { posts } from '@/utils'
 
-export default function Home() {
+function PostIndex() {
   return (
     <div>
-      {posts.slice(0, 10).map((i) => {
+      {posts.map((i) => {
         return (
           <Link href={'/posts' + i.value} key={i.value}>
             <div>{i.label}</div>
@@ -14,3 +14,5 @@ export default function Home() {
     </div>
   )
 }
+
+export default PostIndex

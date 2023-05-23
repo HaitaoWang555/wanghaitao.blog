@@ -8,6 +8,7 @@ function Header() {
   const [nav] = useState([
     { label: '主页', value: '/' },
     { label: '标签', value: '/tag' },
+    { label: '分类', value: '/category' },
     { label: '关于', value: '/about' },
   ])
 
