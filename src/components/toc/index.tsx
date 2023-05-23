@@ -14,9 +14,13 @@ function Toc() {
     }
   }, [pathname])
   return (
-    <div id="tocWrap">
-      <div className="markdown-body"></div>
-    </div>
+    <>
+      {['/test'].includes(pathname) && (
+        <div id="tocWrap">
+          <div className="markdown-body"></div>
+        </div>
+      )}
+    </>
   )
 }
 

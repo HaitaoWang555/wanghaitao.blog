@@ -1,5 +1,6 @@
 import config from 'config'
 import Head from 'next/head'
+import Header from '@/components/header'
 import Toc from '@/components/toc'
 import Top from '@/components/top'
 
@@ -13,7 +14,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         />
         <title>{config.title}</title>
       </Head>
-      <main className="min-h-screen mx-auto container flex justify-between relative">
+      <Header />
+      <main className="mx-auto container flex justify-between relative" style={{ marginTop: '72px' }}>
         <div className="markdown-body">
           {children}
           <Top />

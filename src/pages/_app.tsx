@@ -1,4 +1,5 @@
 import '@/styles/globals.scss'
+import '@/styles/tailwindcss.css'
 import '@/styles/reset.scss'
 import '@/styles/markdown.scss'
 import '@/styles/prism.css'
