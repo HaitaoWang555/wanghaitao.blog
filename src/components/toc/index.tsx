@@ -5,6 +5,7 @@ function Toc() {
   const pathname = usePathname()
 
   function isShowToc(type: string) {
+    if (!type) return false
     return type.indexOf('/posts') > -1 || type.indexOf('/test') > -1
   }
 

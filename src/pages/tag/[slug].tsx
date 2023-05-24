@@ -3,25 +3,6 @@ import { useRouter } from 'next/router'
 import { getTags } from '@/utils'
 import Link from 'next/link'
 
-export const getStaticPaths: GetStaticPaths<{ slug: string }> = async () => {
-  const tags = getTags()
-  const paths = tags.map((i) => {
-    return { params: { slug: i.value } }
-  })
-  return {
-    paths: paths,
-    fallback: false,
-  }
-}
-
-export const getStaticProps: GetStaticProps<any, { slug: string }> = async ({ params }) => {
-  return {
-    props: {
-      slug: params?.slug,
-    },
-  }
-}
-
 function Tag() {
   const router = useRouter()
   const tags = getTags()

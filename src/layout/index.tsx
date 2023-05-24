@@ -20,12 +20,14 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       </Head>
 
       {y < 200 && <Header />}
-      <main className="mx-auto container flex justify-between relative" style={{ marginTop: '72px' }}>
-        <div className="markdown-body">
-          {children}
-          {typeof window !== undefined && y > 200 && <Top />}
+      <main className="mx-auto container relative" style={{ marginTop: '72px' }}>
+        <div className="content flex justify-between w-4/5 mx-auto">
+          <div className="markdown-body">
+            {children}
+            {typeof window !== undefined && y > 200 && <Top />}
+          </div>
+          <Toc></Toc>
         </div>
-        <Toc></Toc>
       </main>
     </>
   )

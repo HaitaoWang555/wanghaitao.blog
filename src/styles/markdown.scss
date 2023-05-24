@@ -136,14 +136,14 @@ h6 {
 
 // ul, ol
 .markdown-body {
-  > ul {
-    li:before {
-      content: "→ ";
-    }
-    li.task-list-item:before {
-      content: '';
-    }
-  }
+  // > ul {
+  //   li:before {
+  //     content: "→ ";
+  //   }
+  //   li.task-list-item:before {
+  //     content: '';
+  //   }
+  // }
   > ol {
     li {
       counter-increment: list-item;
