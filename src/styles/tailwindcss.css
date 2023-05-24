@@ -4,3 +4,6 @@
 .btn-primary.active {
   @apply bg-blue-300 text-white hover:bg-blue-500 
 }
+.f-center-start {
+  @apply flex items-center justify-start
+}

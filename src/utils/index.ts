@@ -45,3 +45,16 @@ export function getTags() {
   })
   return tags
 }
+
+export const colorString = [
+  '!text-emerald-600',
+  '!text-orange-600',
+  '!text-red-600',
+  '!text-sky-600',
+  '!text-teal-600',
+  '!text-blue-600',
+  '!text-amber-600',
+  '!text-yellow-600',
+  '!text-lime-600',
+  '!text-green-600',
+]

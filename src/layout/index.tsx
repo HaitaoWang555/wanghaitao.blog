@@ -1,7 +1,12 @@
 import config from 'config'
 import Head from 'next/head'
 import { useWindowScroll } from 'react-use'
-
+import { Roboto } from 'next/font/google'
+const roboto = Roboto({
+  weight: '400',
+  subsets: ['latin'],
+  display: 'swap',
+})
 import Header from '@/components/header'
 import Toc from '@/components/toc'
 import Top from '@/components/top'
@@ -10,7 +15,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   const { y } = useWindowScroll()
 
   return (
-    <>
+    <div className={roboto.className}>
       <Head>
         <meta
           name="viewport"
@@ -29,6 +34,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           <Toc></Toc>
         </div>
       </main>
-    </>
+    </div>
   )
 }

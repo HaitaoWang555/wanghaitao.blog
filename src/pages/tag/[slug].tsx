@@ -1,4 +1,3 @@
-import { GetStaticPaths, GetStaticProps } from 'next'
 import { useRouter } from 'next/router'
 import { getTags } from '@/utils'
 import Link from 'next/link'
@@ -6,19 +5,23 @@ import Link from 'next/link'
 function Tag() {
   const router = useRouter()
   const tags = getTags()
-  const posts = tags.find((i) => i.value === router.query.slug)?.posts
+  const tag = tags.find((i) => i.value === router.query.slug)
+  const posts = tag ? tag.posts : []
 
   return (
-    <>
-      {posts &&
-        posts.map((i) => {
-          return (
-            <Link href={'/posts' + i.value} key={i.value}>
-              <div>{i.label}</div>
-            </Link>
-          )
-        })}
-    </>
+    <div>
+      <h3>{tag?.label}</h3>
+      <ul>
+        {posts &&
+          posts.map((i) => {
+            return (
+              <li key={i.value}>
+                <Link href={'/posts' + i.value}>{i.label}</Link>
+              </li>
+            )
+          })}
+      </ul>
+    </div>
   )
 }
 
