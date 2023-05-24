@@ -1,4 +1,3 @@
-import UnorderedList from '@/components/lists/UnorderedList'
 import type { MDXComponents } from 'mdx/types'
 
 // This file is required to use MDX in `app` directory.
