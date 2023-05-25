@@ -1,4 +1,5 @@
 import posts from '@/assets/posts.json'
+import { category, tag } from '@/types/page'
 
 export { posts }
 
@@ -10,13 +11,13 @@ export function getCategory() {
   const categories: category[] = []
 
   posts.forEach((p) => {
-    const index = categories.findIndex((i) => i.value === p.category)
+    const index = categories.findIndex((i) => i.value === p.category.value)
     if (index > -1) {
-      categories[index].posts.push(p)
+      categories[index].posts?.push(p)
     } else {
       categories.push({
-        label: p.category,
-        value: p.category,
+        label: p.category.label,
+        value: p.category.value,
         posts: [p],
       })
     }
@@ -30,13 +31,13 @@ export function getTags() {
   posts.forEach((p) => {
     if (p.tag && p.tag.length > 0) {
       p.tag.forEach((t) => {
-        const index = tags.findIndex((i) => i.value === t)
+        const index = tags.findIndex((i) => i.value === t.value)
         if (index > -1) {
-          tags[index].posts.push(p)
+          tags[index].posts?.push(p)
         } else {
           tags.push({
-            label: t,
-            value: t,
+            label: t.label,
+            value: t.value,
             posts: [p],
           })
         }

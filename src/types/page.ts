@@ -1,18 +1,18 @@
-type post = {
+export type post = {
   label: string
   value: string
-  category: string
-  tag: string[]
+  category: category
+  tag: tag[]
 }
 
-type category = {
+export type category = {
   label: string
   value: string
-  posts: post[]
+  posts?: post[]
 }
 
-type tag = {
+export type tag = {
   label: string
   value: string
-  posts: post[]
+  posts?: post[]
 }

@@ -23,18 +23,18 @@ function Tag() {
                 style={{
                   // 该 tag 文章数占总数 20% 时字体达到最大 scale
                   fontSize: Math.min(
-                    FONT_MIN + ((i.posts.length / posts.length) * (FONT_MAX - FONT_MIN)) / 0.2,
+                    FONT_MIN + (((i.posts ? i.posts.length : 0) / posts.length) * (FONT_MAX - FONT_MIN)) / 0.2,
                     FONT_MAX
                   ),
                   // 该 tag 文章数占总数 10% 时字体颜色达到最深
                   opacity: Math.min(
-                    OPACITY_MIN + ((i.posts.length / posts.length) * (OPACITY_MAX - OPACITY_MIN)) / 0.1,
+                    OPACITY_MIN + (((i.posts ? i.posts.length : 0) / posts.length) * (OPACITY_MAX - OPACITY_MIN)) / 0.1,
                     OPACITY_MAX
                   ),
                 }}
               >
                 {i.label}
-                <sup>{i.posts.length}</sup>
+                <sup>{i.posts?.length}</sup>
               </Link>
             </div>
           )

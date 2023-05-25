@@ -17,15 +17,15 @@ export default function Home() {
             </h2>
             <div className="f-center-start">
               <div>
-                <Link href={'/category#' + i.category} className="f-center-start mx-2">
-                  <FcFolder /> {i.category}
+                <Link href={'/category#' + i.category.value} className="f-center-start mx-2">
+                  <FcFolder /> {i.category.label}
                 </Link>
               </div>
               <div className="f-center-start mx-2">
                 {i.tag.map((t, j) => {
                   return (
-                    <Link key={j} href={'/tag/' + t} className={'mr-2 ' + `${colorString[j]}`}>
-                      #{t}
+                    <Link key={j} href={'/tag/' + t.value} className={'mr-2 ' + `${colorString[j]}`}>
+                      #{t.label}
                     </Link>
                   )
                 })}
