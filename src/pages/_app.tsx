@@ -6,11 +6,13 @@ import '@/styles/prism.css'
 import 'github-markdown-css'
 import Layout from '@/layout'
 import type { AppProps } from 'next/app'
+import { Analytics } from '@vercel/analytics/react'
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (
     <Layout>
       <Component {...pageProps} />
+      <Analytics />
     </Layout>
   )
 }
