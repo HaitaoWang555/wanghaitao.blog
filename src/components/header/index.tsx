@@ -42,7 +42,7 @@ function Header() {
               </Link>
             )
           })}
-          {path.startsWith('/resume') && (
+          {path && path.startsWith('/resume') && (
             <a>
               <div className="btn-primary" onClick={print}>
                 打印
