@@ -6,6 +6,10 @@ import rehypeSlug from 'rehype-slug'
 import rehypePrism from 'rehype-prism-plus'
 import rehypeCodeTitles from 'rehype-code-titles'
 
+const ContentSecurityPolicy = `
+connect-src 'self' vitals.vercel-insights.com
+`
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'mdx', 'md'],
@@ -16,6 +20,19 @@ const nextConfig = {
   },
   sassOptions: {
     includePaths: ['./src'],
+  },
+  async headers() {
+    return [
+      {
+        source: '/:path*',
+        headers: [
+          {
+            key: 'Content-Security-Policy',
+            value: ContentSecurityPolicy.replace(/\s{2,}/g, ' ').trim(),
+          },
+        ],
+      },
+    ]
   },
 }
 

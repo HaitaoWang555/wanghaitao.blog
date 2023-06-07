@@ -7,3 +7,6 @@
 .f-center-start {
   @apply flex items-center justify-start
 }
+.bg-primary {
+  background-color: #1677ff;
+}

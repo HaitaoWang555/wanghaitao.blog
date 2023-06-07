@@ -19,8 +19,12 @@ function Header() {
     setClientPath(location.pathname)
   }, [path])
 
+  function print() {
+    window.print()
+  }
+
   return (
-    <div className={'bg-slate-50 ' + styles.header}>
+    <div id="HEADER" className={'bg-slate-50 ' + styles.header}>
       <div className={'mx-auto  container flex justify-between py-4'}>
         <div className="logo"></div>
         <div className={styles.nav}>
@@ -38,6 +42,13 @@ function Header() {
               </Link>
             )
           })}
+          {path.startsWith('/resume') && (
+            <a>
+              <div className="btn-primary" onClick={print}>
+                打印
+              </div>
+            </a>
+          )}
         </div>
       </div>
     </div>
