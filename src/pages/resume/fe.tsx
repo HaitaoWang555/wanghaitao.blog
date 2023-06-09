@@ -36,8 +36,34 @@ function FeResume() {
       <h2>我的优势</h2>
       <p>
         拥有6年的Web相关开发经验，熟悉前后端分离开发模式，能够根据实际业务场景提出相应的技术解决方案，具备独立解决问题的能力，对于项目调试、优化有丰富经验，熟悉常见后端技术。
-        能够根据项目实际情况与团队成员水平合理的与其它部门沟通完成排期计划。参与工程师文化建设组织技术分享与培训，提升整体团队的能力和水平。
+        能够根据项目实际情况与团队成员水平合理的与其它部门沟通完成排期计划。
       </p>
+
+      <h2>核心技能</h2>
+
+      <ol>
+        <li>
+          <strong>Vue2技术栈 - Vue CLI、Vue、Vuex、Vue Router、Ant Design of Vue、ElementUI</strong>
+        </li>
+        <li>
+          <strong>Vue3技术栈 - Vite、Typescript、Vue3、Pinia、Vue Router、element-plus、tailwindcss</strong>
+        </li>
+        <li>
+          <strong>React技术栈 - Vite、Typescript、React Hooks、React Router、Zustand、Ant Design</strong>
+        </li>
+        <li>
+          <strong>桌面端与客户端 - electron、uni-app</strong>
+        </li>
+        <li>
+          <strong>服务端渲染 - Next、Nuxt</strong>
+        </li>
+        <li>
+          <strong>服务端 - Nest(Node)、Spring Boot(Java)</strong>
+        </li>
+        <li>
+          <strong>辅助开发工具 - DevTools、Charles、Postman、Docker</strong>
+        </li>
+      </ol>
 
       <h2>工作经历</h2>
 
