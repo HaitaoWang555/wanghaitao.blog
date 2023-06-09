@@ -4,6 +4,8 @@ import classNames from 'classnames'
 
 import styles from './style.module.scss'
 import { usePathname } from 'next/navigation'
+import { useWindowSize } from 'react-use'
+
 function Header() {
   const [nav] = useState([
     { label: '主页', value: '/' },
@@ -14,6 +16,7 @@ function Header() {
 
   const [clientPath, setClientPath] = useState('/')
   const path = usePathname()
+  const { width } = useWindowSize()
 
   useEffect(() => {
     setClientPath(location.pathname)
@@ -42,7 +45,7 @@ function Header() {
               </Link>
             )
           })}
-          {path && path.startsWith('/resume') && (
+          {path && path.startsWith('/resume') && width > 800 && (
             <a>
               <div className="btn-primary" onClick={print}>
                 打印
