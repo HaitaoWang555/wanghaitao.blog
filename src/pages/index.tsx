@@ -6,7 +6,7 @@ const postsLen = 15
 
 export default function Home() {
   return (
-    <ul>
+    <ul style={{ paddingLeft: 0 }}>
       {posts.slice(0, postsLen).map((i, index) => {
         return (
           <li key={i.value}>

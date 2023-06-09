@@ -153,4 +153,8 @@ h6 {
       content: counter(list-item) ". ";
     }
   }
+  h2 {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }

@@ -1,8 +1,11 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { usePathname } from 'next/navigation'
+import { useWindowSize } from 'react-use'
 
 function Toc() {
   const pathname = usePathname()
+  const { width } = useWindowSize()
+  const [show, setShow] = useState(false)
 
   function isShowToc(type: string) {
     if (!type) return false
@@ -10,6 +13,8 @@ function Toc() {
   }
 
   useEffect(() => {
+    setShow(true)
+
     const toc = document.querySelector('.markdown-body .toc')
     const tocWrap = document.querySelector('#tocWrap .markdown-body')
 
@@ -21,7 +26,7 @@ function Toc() {
   }, [pathname])
   return (
     <>
-      {isShowToc(pathname) && (
+      {show && width > 800 && isShowToc(pathname) && (
         <div id="tocWrap">
           <div className="markdown-body"></div>
         </div>
