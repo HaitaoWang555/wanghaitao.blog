@@ -27,11 +27,11 @@ function FeResume() {
     <>
       <h1>王海涛</h1>
 
-      <p>男 29岁 本科 6年前端开发经验 手机号码/微信号：{decrypt(mobile)}</p>
+      <p>男 29岁 本科 6年开发经验 手机号码/微信号：{decrypt(mobile)}</p>
 
       <p>{decrypt(university)} 2012 - 2016</p>
 
-      <p>Web前端开发 北京 在职 一月内到岗</p>
+      <p>开发工程师 北京 离职 随时到岗</p>
 
       <h2>我的优势</h2>
       <p>
@@ -67,7 +67,7 @@ function FeResume() {
 
       <h2>工作经历</h2>
 
-      <h3>2020年11月 - 2023年6月 {decrypt(company[0])} 开发工程师</h3>
+      <h3>2021年11月 - 2023年6月 {decrypt(company[0])} 开发工程师</h3>
 
       <ol>
         <li>
@@ -78,7 +78,7 @@ function FeResume() {
         <li>开发人员的招聘、技术培训、制定考核指标等工作</li>
       </ol>
 
-      <h3>2020年3月 - 2020年11月 {decrypt(company[1])} Web前端开发</h3>
+      <h3>2021年3月 - 2021年11月 {decrypt(company[1])} Web前端开发</h3>
 
       <ol>
         <li>
@@ -91,7 +91,7 @@ function FeResume() {
         </li>
       </ol>
 
-      <h3>2020年10月 - 2020年03月 {decrypt(company[2])} Web前端开发</h3>
+      <h3>2020年10月 - 2021年03月 {decrypt(company[2])} Web前端开发</h3>
 
       <ol>
         <li>独立完成电商平台商家端、管理后台、CRM平台开发</li>
@@ -124,6 +124,45 @@ function FeResume() {
       </ol>
 
       <h2>项目经历</h2>
+
+      <h3>管理后台模版</h3>
+      <ol>
+        <li>
+          项目描述：一个通用的后台管理系统，后台使用 `Nest` 前台页面使用 `React`，完善的权限管理功能，代码自动生成功能；
+          前端对基础UI组件进行封装，可以实现通过配置属性完成常规增删改查页面；后台有完善的参数校验、错误处理机制，自定义装饰器实现对特定接口的
+          日志记录，使用TypeOrm为数据库进行迁移及数据初始化；可以通过Docker进行开发及部署。
+        </li>
+        <li>
+          前端技术栈：使用<strong>Vite、Typescript、React Hooks、React Router、Zustand、Ant Design</strong>
+          后端技术栈：使用<strong>Nest、Typescript、TypeOrm、Mysql、Redis、jwt、swagger</strong>
+        </li>
+        <li>
+          <a href="https://github.com/HaitaoWang555/sip_tea" target="_blank">
+            源码
+          </a>
+          {'  '}
+          <a href="http://admin.0522.store/" target="_blank">
+            预览
+          </a>
+        </li>
+      </ol>
+
+      <h3>静态博客项目</h3>
+      <ol>
+        <li>项目描述：通过 vercel 进行自动化部署的静态博客项目；对部分页面进行授权拦截以及隐私信息处理</li>
+        <li>
+          技术栈：使用<strong>Next、Typescript、tailwindcss、mdx、crypto-js、vercel</strong>
+        </li>
+        <li>
+          <a href="https://github.com/HaitaoWang555/wanghaitao.blog" target="_blank">
+            源码
+          </a>
+          {'  '}
+          <a href="https://wanghaitao-blog.vercel.app/" target="_blank">
+            预览
+          </a>
+        </li>
+      </ol>
 
       <h3>{decrypt(project[0])}</h3>
       <ol>
