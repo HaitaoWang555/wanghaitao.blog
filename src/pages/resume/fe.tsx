@@ -73,6 +73,9 @@ function FeResume() {
         <li>
           牵头开发{decrypt(project[1])}、{decrypt(project[0])}、{decrypt(project[2])}
         </li>
+        <li>
+          维护{decrypt(project[4])}与{decrypt(project[3])}
+        </li>
         <li>开发公共组件、制定模板代码快速生成业务代码，提供本地及在线数据mock方案</li>
         <li>制定统一开发规范、搭建组件使用说明文档、对代码以及上线文档进行审查</li>
         <li>开发人员的招聘、技术培训、制定考核指标等工作</li>
@@ -128,7 +131,8 @@ function FeResume() {
       <h3>管理后台模版</h3>
       <ol>
         <li>
-          项目描述：一个通用的后台管理系统，后台使用 `Nest` 前台页面使用 `React`，完善的权限管理功能，代码自动生成功能；
+          项目描述：一个通用的后台管理系统，后台使用 <strong>Nest</strong> 前台页面使用 <strong>React</strong>
+          ，完善的权限管理功能，代码自动生成功能；
           前端对基础UI组件进行封装，可以实现通过配置属性完成常规增删改查页面；后台有完善的参数校验、错误处理机制，自定义装饰器实现对特定接口的
           日志记录，使用TypeOrm为数据库进行迁移及数据初始化；可以通过Docker进行开发及部署。
         </li>
@@ -158,7 +162,7 @@ function FeResume() {
             源码
           </a>
           {'  '}
-          <a href="https://wanghaitao-blog.vercel.app/" target="_blank">
+          <a href="https://blog.0522.store/" target="_blank">
             预览
           </a>
         </li>
@@ -184,7 +188,7 @@ function FeResume() {
       <ol>
         <li>项目描述：基于{decrypt(other[0])}大数据为客户提供更好的广告投放方案</li>
         <li>
-          技术栈：使用<strong>Vue、Vuex、Vue Router</strong>搭建项目，UI框架使用<strong>Ant Design of Vue</strong>
+          技术栈：使用<strong>Vue、Vuex、Vue Router</strong>搭建项目，UI框架使用<strong>Ant Design of Vue</strong>、
           <strong>tailwindcss</strong>
         </li>
         <li>

@@ -117,7 +117,7 @@ CREATE SPATIAL INDEX index_line ON tb_student(line);
 
 5. 全文索引
 
-全文索引主要用来查找文本中的关键字，只能在 CHAR、VARCHAR 或 TEXT 类型的列上创建。在 MySQL 中只有 MyISAM 存储引擎支持全文索引。
+全文索引主要用来查找文本中的关键字，只能在 CHAR、VARCHAR 或 TEXT 类型的列上创建。
 
 全文索引允许在索引列中插入重复值和空值。
 
@@ -127,7 +127,6 @@ CREATE SPATIAL INDEX index_line ON tb_student(line);
 ```sql
 -- 在 tb_student 表中的 info 字段上建立名为 index_info 的全文索引
 CREATE FULLTEXT INDEX index_info ON tb_student(info);
--- 其中，index_info 的存储引擎必须是 MyISAM，info 字段必须是 CHAR、VARCHAR 和 TEXT 等类
 ```
 
 ### 实际使用区分
